@@ -2,6 +2,7 @@ import streamlit as st
 from scraper import get_ev_matches
 
 st.title("Gasoline to EV Replacement Tool")
+st.write("👋 Enter a vehicle and click the button to begin.")
 
 try:
     vehicle_input = st.text_input("Enter a gasoline vehicle:")
@@ -17,5 +18,6 @@ try:
             st.warning("No matches found or scraping returned nothing.")
 except Exception as e:
     st.error(f"An error occurred: {e}")
+
 
 
